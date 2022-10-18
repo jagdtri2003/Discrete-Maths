@@ -1,3 +1,3 @@
 # Discrete-Maths
 
-This is file for my Dicrete Maths Lab !!
+This file is for my Dicrete Maths Lab !!
