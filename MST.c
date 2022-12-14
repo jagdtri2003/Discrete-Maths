@@ -40,12 +40,12 @@ int main(){
 	
 	}
 
-	printf("Adjacency Matrix is : \n");
-	for (i=0;i<vc;i++){
-		for (j=0;j<vc;j++)
-			printf("%d\t",adj[i][j]);
-		printf("\n");
-	}
+	// printf("Adjacency Matrix is : \n");
+	// for (i=0;i<vc;i++){
+	// 	for (j=0;j<vc;j++)
+	// 		printf("%d\t",adj[i][j]);
+	// 	printf("\n");
+	// }
 
 	while(count<vc-1){
 
@@ -65,19 +65,21 @@ int main(){
 		adj[b][a]=inf;
 		
 		if (found[a] == -1 || found[b]==-1){
-
+			count++;
 			minCost+=min;
 			if (found[a]==-1){
 				found[a]=1;
+				found[b]=1;
 				printf("%d to %d  : Cost %d \n",a,b,min);
+				
 			}
 			else if (found[b]==-1){
+				found[a]=1;
 				found[b]=1;
 				printf("%d to %d  : Cost %d \n",a,b,min);
 			}
 		}
-		count++;	
-
+			
 	}
 
 	printf("Minimum Cost is : %d ",minCost);
