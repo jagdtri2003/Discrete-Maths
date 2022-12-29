@@ -40,13 +40,6 @@ int main(){
 	
 	}
 
-	// printf("Adjacency Matrix is : \n");
-	// for (i=0;i<vc;i++){
-	// 	for (j=0;j<vc;j++)
-	// 		printf("%d\t",adj[i][j]);
-	// 	printf("\n");
-	// }
-
 	while(count<vc-1){
 
 		for (i=0,min=inf;i<vc;i++){
