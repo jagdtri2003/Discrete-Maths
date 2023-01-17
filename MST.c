@@ -1,7 +1,6 @@
 #include <stdio.h>
 #define inf 999
 
-
 int main(){
 
 	int i,j,vc,val,count=0,min,minCost=0,a,b;
