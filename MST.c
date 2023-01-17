@@ -56,13 +56,8 @@ int main(){
 			minCost+=min;
 			found[a]=1;
 			found[b]=1;
-			if (found[a]==-1){
-				printf("%d to %d  : Cost %d \n",a,b,min);
-				
-			}
-			else if (found[b]==-1){
-				printf("%d to %d  : Cost %d \n",a,b,min);
-			}
+			
+			printf("%d to %d  : Cost %d \n",a,b,min);
 		}	
 	}
 	printf("Minimum Cost is : %d ",minCost);
