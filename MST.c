@@ -37,22 +37,17 @@ int main(){
 				}
 			}
 		}
-	
 	}
-
 	while(count<vc-1){
 
 		for (i=0,min=inf;i<vc;i++){
-			for (j=0;j<vc;j++){
-				
+			for (j=0;j<vc;j++){			
 				if (adj[i][j]<min){
 					min=adj[i][j];
 					a=i;
 					b=j;
 				}
-		
 			}
-				
 		}
 		adj[a][b]=inf;
 		adj[b][a]=inf;
@@ -60,23 +55,18 @@ int main(){
 		if (found[a] == -1 || found[b]==-1){
 			count++;
 			minCost+=min;
+			found[a]=1;
+			found[b]=1;
 			if (found[a]==-1){
-				found[a]=1;
-				found[b]=1;
 				printf("%d to %d  : Cost %d \n",a,b,min);
 				
 			}
 			else if (found[b]==-1){
-				found[a]=1;
-				found[b]=1;
 				printf("%d to %d  : Cost %d \n",a,b,min);
 			}
-		}
-			
+		}	
 	}
-
 	printf("Minimum Cost is : %d ",minCost);
 	
-
 	return 0;
 }
