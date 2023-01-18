@@ -25,7 +25,7 @@ int main(){
 void dijkstra(int adj[max][max],int n,int start){
     
     int cost[max][max],distance[max],pred[max];
-    int visited[max],count,mindistance,nextnode,i,j;
+    int visited[max],count,minDistance,nextNode,i,j;
     for(i=0;i<n;i++){
         for(j=0;j<n;j++){
             if (adj[i][j]==0)
@@ -43,19 +43,19 @@ void dijkstra(int adj[max][max],int n,int start){
     visited[start]=1;
     count=1;
     while(count<n-1){
-        mindistance=infinity;
+        minDistance=infinity;
         for (i=0;i<n;i++){
-            if (distance[i]<mindistance && !visited[i]){
-                mindistance=distance[i];
-                nextnode=i;
+            if (distance[i]<minDistance && !visited[i]){
+                minDistance=distance[i];
+                nextNode=i;
             }
         }
-        visited[nextnode]=1;
+        visited[nextNode]=1;
         for(i=0;i<n;i++){
             if(!visited[i]){
-                if (mindistance+cost[nextnode][i]<distance[i]){
-                    distance[i]=mindistance+cost[nextnode][i];
-                    pred[i]=nextnode;
+                if (minDistance+cost[nextNode][i]<distance[i]){
+                    distance[i]=minDistance+cost[nextNode][i];
+                    pred[i]=nextNode;
                 }
             }
         }
