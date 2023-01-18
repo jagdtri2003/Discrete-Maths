@@ -3,7 +3,7 @@
 #define infinity 9999
 #define max 10
 
-void dijkastra(int adj[max][max],int n,int start);
+void dijkstra(int adj[max][max],int n,int start);
 
 int main(){
     int adj[max][max],i,j,n,u;
@@ -17,12 +17,12 @@ int main(){
     }
     printf("\nEnter the starting node : ");
     scanf("%d",&u);
-    dijkastra(adj,n,u);
+    dijkstra(adj,n,u);
 
     return 0;
 }
 
-void dijkastra(int adj[max][max],int n,int start){
+void dijkstra(int adj[max][max],int n,int start){
     
     int cost[max][max],distance[max],pred[max];
     int visited[max],count,mindistance,nextnode,i,j;
